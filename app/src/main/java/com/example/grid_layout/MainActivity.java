@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-//tgshbgsudggsghh
-
     }
 
     public void onImageClicked(View view) {
