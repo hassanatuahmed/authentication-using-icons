@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your icon"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/mainGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:columnCount="4"
+                android:layout_gravity="center">
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/instagram_48px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/money_bag_48px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bed_25px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/google_plus_48px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/netflix_48px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gmail_48px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/adobe_photoshop_48px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/happy_filled_25px"
+                    android:text="Click2"
+                    android:textSize="14sp"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
