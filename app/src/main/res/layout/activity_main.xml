@@ -72,8 +72,8 @@
                     android:adjustViewBounds="true"
                     android:textColor="@drawable/checkable_text_color"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bed_25px"
                     android:text="Click2"
+                    android:src="@drawable/add_user_male_48px"
                     android:textSize="14sp"/>
 
 
@@ -135,8 +135,58 @@
                     android:adjustViewBounds="true"
                     android:textColor="@drawable/checkable_text_color"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/happy_filled_25px"
+                    android:src="@drawable/school_48px"
                     android:text="Click2"
+                    android:textSize="14sp"/>
+
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:text="Click2"
+                    android:src="@drawable/gears_48px"
+                    android:textSize="14sp"/>
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:text="Click2"
+                    android:src="@drawable/raspberry_pi_48px"
+                    android:textSize="14sp"/>
+
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:text="Click2"
+                    android:src="@drawable/musical_notes_48px"
+                    android:textSize="14sp"/>
+
+                <com.dunst.check.CheckableImageButton
+                    android:id="@+id/btn13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:textColor="@drawable/checkable_text_color"
+                    android:scaleType="fitCenter"
+                    android:text="Click2"
+                    android:src="@drawable/java_coffee_cup_logo_48px"
                     android:textSize="14sp"/>
 
             </androidx.gridlayout.widget.GridLayout>
