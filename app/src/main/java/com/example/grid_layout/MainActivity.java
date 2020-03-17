@@ -30,12 +30,20 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     private List<Model> mModelList;
     private List<Model> modelListSave;
     private RecyclerView.Adapter mAdapter;
-    private int[] imgList = {R.drawable.instagram_48px, R.drawable.truck_48px,
-            R.drawable.instagram_48px, R.drawable.truck_48px,
-            R.drawable.instagram_48px, R.drawable.truck_48px,
-            R.drawable.instagram_48px, R.drawable.truck_48px,
-            R.drawable.instagram_48px, R.drawable.truck_48px,
-            R.drawable.instagram_48px, R.drawable.truck_48px, };
+    private int[] imgList = {R.drawable.instagram_48px, R.drawable.add_user_male_48px,
+            R.drawable.adobe_photoshop_48px,
+            R.drawable.cash_in_hand_48px, R.drawable.gears_48px,
+            R.drawable.gift_48px, R.drawable.gmail_48px,
+            R.drawable.google_plus_48px,
+            R.drawable.java_coffee_cup_logo_48px, R.drawable.minimize_window_48px,
+            R.drawable.minus_48px, R.drawable.money_bag_48px,
+            R.drawable.musical_notes_48px, R.drawable.netflix_48px,
+            R.drawable.password_48px, R.drawable.pdf_2_48px,
+            R.drawable.pill_48px, R.drawable.raspberry_pi_48px,
+            R.drawable.rubiks_cube_48px,
+            R.drawable.school_48px, R.drawable.shutdown_48px,
+            R.drawable.stethoscope_48px, R.drawable.trust_48px,
+            R.drawable.twitter_48px, R.drawable.truck_48px, };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
     private List<Model> getListData() {
-        for (int i = 1; i <= imgList.length; i++) {
+        for (int i = 0; i < imgList.length; i++) {
             mModelList.add(new Model(imgList[i]));
         }
         return mModelList;
