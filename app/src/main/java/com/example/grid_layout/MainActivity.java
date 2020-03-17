@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     private List<Model> mModelList;
     private List<Model> modelListSave;
     private RecyclerView.Adapter mAdapter;
+    private int[] imgList = {R.drawable.instagram_48px, R.drawable.truck_48px,
+            R.drawable.instagram_48px, R.drawable.truck_48px,
+            R.drawable.instagram_48px, R.drawable.truck_48px,
+            R.drawable.instagram_48px, R.drawable.truck_48px,
+            R.drawable.instagram_48px, R.drawable.truck_48px,
+            R.drawable.instagram_48px, R.drawable.truck_48px, };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
     private List<Model> getListData() {
-        for (int i = 1; i <= 24; i++) {
-            mModelList.add(new Model(R.drawable.instagram_48px));
+        for (int i = 1; i <= imgList.length; i++) {
+            mModelList.add(new Model(imgList[i]));
         }
         return mModelList;
     }
