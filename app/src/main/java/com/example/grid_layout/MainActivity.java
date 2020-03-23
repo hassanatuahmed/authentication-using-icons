@@ -22,6 +22,7 @@ import android.widget.ToggleButton;
 import com.dunst.check.CheckableImageButton;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.ItemClickListener{
@@ -109,7 +110,15 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 public void onClick(DialogInterface dialog, int id) {
                     // sign in the user ...
                             Toast.makeText(MainActivity.this, "in dialog", Toast.LENGTH_SHORT).show();
-                    }
+                            // writing intent here
+                    Intent intent = new Intent(MainActivity.this,ConvexActivity.class);
+                    startActivity(intent);
+                    Collections.shuffle(imgList);
+
+
+
+
+                }
                 });
 
         AlertDialog dialog = builder.create();
