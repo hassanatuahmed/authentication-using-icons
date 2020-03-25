@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">grid_layout</string>
+    <string name="preference_file_key">lock key</string>
 </resources>

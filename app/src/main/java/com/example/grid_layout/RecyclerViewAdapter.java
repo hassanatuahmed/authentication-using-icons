@@ -9,7 +9,6 @@ import android.widget.ImageButton;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dunst.check.CheckableImageButton;
 
 import java.util.List;
 
@@ -18,13 +17,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    public RecyclerViewAdapter(Context context, List<Model> modelList, ItemClickListener mClickListener) {
+    RecyclerViewAdapter(Context context, List<Model> modelList, ItemClickListener mClickListener) {
         this.mInflater = LayoutInflater.from(context);
         mModelList = modelList;
         this.mClickListener = mClickListener;
     }
 
-    public RecyclerViewAdapter(Context context, List<Model> modelList) {
+    RecyclerViewAdapter(Context context, List<Model> modelList) {
         this.mInflater = LayoutInflater.from(context);
         mModelList = modelList;
     }
@@ -41,11 +40,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //        holder.imageBtn.setBackgroundResource(R.drawable.instagram_48px);
 //        holder.imageBtn.setBackgroundResource(model.getImg());
         holder.imageBtn.setImageResource(model.getImg());
-        holder.view.setBackgroundColor(model.isSelected() ? Color.CYAN : Color.WHITE);
+        holder.view.setBackgroundColor(model.isSelected() && mClickListener != null ? Color.CYAN : Color.WHITE);
         holder.imageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mClickListener.onItemClick(holder.view, position);
+                if (mClickListener != null){
+                    mClickListener.onItemClick(holder.view, position);
+                }
                 /*model.setSelected(!model.isSelected());
                 holder.view.setBackgroundColor(model.isSelected() ? Color.CYAN : Color.WHITE);*/
             }
@@ -55,6 +56,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return mModelList == null ? 0 : mModelList.size();
+    }
+
+    public void setList(List<Model> m){
+        mModelList = m;
     }
 
     // parent activity will implement this method to respond to click events

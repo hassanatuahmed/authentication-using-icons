@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="images">
+        <item>@drawable/add_user_male_48px</item>
+        <item>@drawable/adobe_photoshop_48px</item>
+<!--        <item>@drawable/bed_25px</item>-->
+        <item>@drawable/cash_in_hand_48px</item>
+<!--        <item>@drawable/crowd_25px</item>-->
+<!--        <item>@drawable/database_filled_25px</item>-->
+        <item>@drawable/gears_48px</item>
+        <item>@drawable/gift_48px</item>
+        <item>@drawable/gmail_48px</item>
+        <item>@drawable/google_plus_48px</item>
+        <item>@drawable/happy_filled_25px</item>
+        <item>@drawable/instagram_48px</item>
+        <item>@drawable/java_coffee_cup_logo_48px</item>
+        <item>@drawable/minimize_window_48px</item>
+        <item>@drawable/minus_48px</item>
+        <item>@drawable/money_bag_48px</item>
+        <item>@drawable/musical_notes_48px</item>
+        <item>@drawable/netflix_48px</item>
+        <item>@drawable/password_48px</item>
+        <item>@drawable/pdf_2_48px</item>
+        <item>@drawable/pill_48px</item>
+        <item>@drawable/raspberry_pi_48px</item>
+        <item>@drawable/rubiks_cube_48px</item>
+        <item>@drawable/school_48px</item>
+        <item>@drawable/shutdown_48px</item>
+        <item>@drawable/stethoscope_48px</item>
+        <item>@drawable/truck_48px</item>
+        <item>@drawable/trust_48px</item>
+        <item>@drawable/twitter_48px</item>
+    </array>
+</resources>
