@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                             // writing intent here
                     Intent intent = new Intent(MainActivity.this,ConvexActivity.class);
                     startActivity(intent);
-                    Collections.shuffle(imgList);
+                    Collections.shuffle(imgList<>);
 
 
 
