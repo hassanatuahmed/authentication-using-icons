@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                     // sign in the user ...
                             Toast.makeText(MainActivity.this, "in dialog", Toast.LENGTH_SHORT).show();
                             // writing intent here
+
                     Intent intent = new Intent(MainActivity.this,ConvexActivity.class);
                     startActivity(intent);
 
