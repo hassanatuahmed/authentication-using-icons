@@ -26,10 +26,10 @@ public class ConvexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_convex);
 
 
-        public class QuickHull {
+        class QuickHull {
 
             /** Returns the quick hull of a {@link Drawable}, which is scaled down by the size */
-            public static ArrayList<Point> quickHull(@NonNull Drawable drawable, int size) {
+            public ArrayList<Point> quickHull(@NonNull Drawable drawable, int size) {
                 return quickHull(Bitmap.createScaledBitmap(drawableToBitmap(drawable), size, size, false));
             }
 
@@ -168,8 +168,7 @@ public class ConvexActivity extends AppCompatActivity {
                 return (cp1 > 0) ? 1 : -1;
             }
 
-            private
-            Bitmap drawableToBitmap(@NonNull Drawable drawable) {
+            private Bitmap drawableToBitmap(@NonNull Drawable drawable) {
                 if (drawable instanceof BitmapDrawable) {
                     return ((BitmapDrawable) drawable).getBitmap();
                 }
