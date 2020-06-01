@@ -11,7 +11,7 @@
         <item>@drawable/gift_48px</item>
         <item>@drawable/gmail_48px</item>
         <item>@drawable/google_plus_48px</item>
-        <item>@drawable/happy_filled_25px</item>
+<!--        <item>@drawable/happy_filled_25px</item>-->
         <item>@drawable/instagram_48px</item>
         <item>@drawable/java_coffee_cup_logo_48px</item>
         <item>@drawable/minimize_window_48px</item>

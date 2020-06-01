@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mAdapter = new RecyclerViewAdapter(this, getListData(), this);
-        GridLayoutManager manager = new GridLayoutManager(MainActivity.this,4);
+        GridLayoutManager manager = new GridLayoutManager(MainActivity.this,5);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.setAdapter(mAdapter);
@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                     }
                 })
                 .setPositiveButton("Save", new DialogInterface.OnClickListener() {
+<<<<<<< HEAD
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
                     // sign in the user ...
@@ -121,6 +122,21 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
 
 
                 }
+=======
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+//                        Toast.makeText(MainActivity.this, "in dialog", Toast.LENGTH_SHORT).show();
+                        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(getString(R.string.app_name), 0);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        Gson gson = new Gson();
+                        String list = gson.toJson(modelListSave);
+                        editor.putString(getString(R.string.preference_file_key), list);
+
+                        editor.apply();
+                        startActivity(new Intent(MainActivity.this,LockScreenActivity.class));
+                        finish();
+                    }
+>>>>>>> dev
                 });
 
         AlertDialog dialog = builder.create();
