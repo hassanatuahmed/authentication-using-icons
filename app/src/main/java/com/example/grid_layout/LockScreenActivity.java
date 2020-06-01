@@ -132,6 +132,7 @@ public class LockScreenActivity extends AppCompatActivity implements RecyclerVie
         mAdapter.setList(getListData());
         mRecyclerView.setAdapter(mAdapter);
 //        setPoint();
+
         if(ccc == 1){
             v1.setVisibility(View.VISIBLE);
             if (c){
