@@ -3,23 +3,22 @@ package com.example.grid_layout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
+import android.content.SharedPreferences;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
-import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
-import com.dunst.check.CheckableImageButton;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,21 +29,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     RecyclerView mRecyclerView;
     private List<Model> mModelList;
     private List<Model> modelListSave;
-    private RecyclerView.Adapter mAdapter;
-    private int[] imgList = {R.drawable.instagram_48px, R.drawable.add_user_male_48px,
-            R.drawable.adobe_photoshop_48px,
-            R.drawable.cash_in_hand_48px, R.drawable.gears_48px,
-            R.drawable.gift_48px, R.drawable.gmail_48px,
-            R.drawable.google_plus_48px,
-            R.drawable.java_coffee_cup_logo_48px, R.drawable.minimize_window_48px,
-            R.drawable.minus_48px, R.drawable.money_bag_48px,
-            R.drawable.musical_notes_48px, R.drawable.netflix_48px,
-            R.drawable.password_48px, R.drawable.pdf_2_48px,
-            R.drawable.pill_48px, R.drawable.raspberry_pi_48px,
-            R.drawable.rubiks_cube_48px,
-            R.drawable.school_48px, R.drawable.shutdown_48px,
-            R.drawable.stethoscope_48px, R.drawable.trust_48px,
-            R.drawable.twitter_48px, R.drawable.truck_48px, };
+    private RecyclerViewAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         setContentView(R.layout.activity_main);
         modelListSave = new ArrayList<>();
         mModelList = new ArrayList<>();
-
+        setListData();
         mRecyclerView = findViewById(R.id.recycler_view);
         mAdapter = new RecyclerViewAdapter(this, getListData(), this);
         GridLayoutManager manager = new GridLayoutManager(MainActivity.this,5);
@@ -63,10 +48,16 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
     private List<Model> getListData() {
-        for (int i = 0; i < imgList.length; i++) {
-            mModelList.add(new Model(imgList[i]));
-        }
+
+        Collections.shuffle(mModelList);
         return mModelList;
+    }
+
+    private void setListData(){
+        TypedArray im = getResources().obtainTypedArray(R.array.images);
+        for (int i = 0; i < im.length(); i++) {
+            mModelList.add(new Model(im.getResourceId(i, -1)));
+        }
     }
 
     @Override
@@ -102,27 +93,20 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         builder.setView(dialogView)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        modelListSave.clear();
+                        for (Model m :
+                                mModelList) {
+                            if (m.isSelected()) {
+                                m.setSelected(false);
+                            }
+                        }
+//                        mAdapter = new RecyclerViewAdapter(MainActivity.this, getListData(), MainActivity.this);
+                        mAdapter.setList(getListData());
+                        mRecyclerView.setAdapter(mAdapter);
                         dialog.dismiss();
                     }
                 })
                 .setPositiveButton("Save", new DialogInterface.OnClickListener() {
-<<<<<<< HEAD
-                @Override
-                public void onClick(DialogInterface dialog, int id) {
-                    // sign in the user ...
-                            Toast.makeText(MainActivity.this, "in dialog", Toast.LENGTH_SHORT).show();
-                            // writing intent here
-
-                    Intent intent = new Intent(MainActivity.this,ConvexActivity.class);
-                    startActivity(intent);
-
-                    // Collections.shuffle(imgList< >);
-
-
-
-
-                }
-=======
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
 //                        Toast.makeText(MainActivity.this, "in dialog", Toast.LENGTH_SHORT).show();
@@ -136,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                         startActivity(new Intent(MainActivity.this,LockScreenActivity.class));
                         finish();
                     }
->>>>>>> dev
                 });
 
         AlertDialog dialog = builder.create();
@@ -144,4 +127,3 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
 }
-

@@ -1,13 +1,11 @@
 package com.example.grid_layout;
 
-<<<<<<< HEAD
-=======
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
->>>>>>> dev
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
